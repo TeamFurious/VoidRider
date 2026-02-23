@@ -1,15 +1,15 @@
-const themeToggle = document.getElementById("themeToggle");
+const toggle = document.getElementById("themeToggle");
 const body = document.body;
-const icon = themeToggle.querySelector("i");
+const icon = toggle.querySelector("i");
 
-themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
+toggle.addEventListener("click", () => {
+    body.classList.toggle("light");
 
-    if (body.classList.contains("light-mode")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
+    if (body.classList.contains("light")) {
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
+    } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
     }
 });
